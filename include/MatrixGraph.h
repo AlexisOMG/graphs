@@ -14,6 +14,7 @@ public:
     MatrixGraph() = default;
     explicit MatrixGraph(int size);
     explicit MatrixGraph(const IGraph &obj);
+    MatrixGraph& operator=(const IGraph &obj) = delete;
     ~MatrixGraph() = default;
 
     void add(int from, int to) override;

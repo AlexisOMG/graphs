@@ -15,7 +15,8 @@ private:
 public:
     ArcGraph() = default;
     explicit ArcGraph(int size);
-    ArcGraph(const IGraph &obj);
+    explicit ArcGraph(const IGraph &obj);
+    ArcGraph& operator=(const IGraph &obj) = delete;
     ~ArcGraph() = default;
 
     void add(int from, int to) override;

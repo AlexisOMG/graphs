@@ -13,7 +13,8 @@ private:
 public:
     ListGraph() = default;
     explicit ListGraph(int size);
-    ListGraph(const IGraph &obj);
+    explicit ListGraph(const IGraph &obj);
+    ListGraph& operator=(const  IGraph &obj) = delete;
     ~ListGraph() = default;
 
     void add(int from, int to) override;

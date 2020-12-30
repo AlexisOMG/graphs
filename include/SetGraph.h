@@ -14,7 +14,8 @@ private:
 public:
     SetGraph() = default;
     explicit SetGraph(int size);
-    SetGraph(const IGraph &obj);
+    explicit SetGraph(const IGraph &obj);
+    SetGraph& operator=(const IGraph &obj) = delete;
     ~SetGraph() = default;
 
     void add(int from, int to) override;
